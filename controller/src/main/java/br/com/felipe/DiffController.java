@@ -24,7 +24,6 @@ public class DiffController {
      */
     @RequestMapping(value = "/diff/{id}/left", method = RequestMethod.POST)
     public String left(@PathVariable String id, @RequestBody String base64JSON) {
-        String json = new String(Base64.decodeBase64(base64JSON));
         return id;
     }
 

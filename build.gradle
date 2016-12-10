@@ -82,3 +82,11 @@ allprojects {
     check.dependsOn jacocoTestReport
 }
 
+/**
+ * wrapper to run on travis
+ */
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
+
