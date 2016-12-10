@@ -1,18 +1,43 @@
 package br.com.felipe;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.tomcat.util.codec.binary.Base64;
+import org.springframework.web.bind.annotation.*;
 
-/**
- * Created by Felipe on 10/12/2016.
- */
 @RestController
 public class DiffController {
 
-    @RequestMapping(value = "/diff/{id}/left", method = RequestMethod.POST)
-    public String left(@PathVariable String id) {
+    /**
+     * Request responsible to compare two jsons by the id
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "/diff/{id}/", method = RequestMethod.POST)
+    public String diff(@PathVariable String id) {
         return id;
     }
+
+    /**
+     * Request responsible to storage the left json (JSON is receive in Base64)
+     * @param id
+     * @param base64JSON
+     * @return
+     */
+    @RequestMapping(value = "/diff/{id}/left", method = RequestMethod.POST)
+    public String left(@PathVariable String id, @RequestBody String base64JSON) {
+        String json = new String(Base64.decodeBase64(base64JSON));
+        return id;
+    }
+
+    /**
+     * Request responsible to storage the right json (JSON is receive in Base64)
+     * @param id
+     * @param base64JSON
+     * @return
+     */
+    @RequestMapping(value = "/diff/{id}/right", method = RequestMethod.POST)
+    public String right(@PathVariable String id, @RequestBody String base64JSON) {
+        String json = new String(Base64.decodeBase64(base64JSON));
+        return id;
+    }
+
 }

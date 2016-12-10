@@ -1,4 +1,6 @@
 rootProject.name = 'JsonDiffer'
 include 'config'
 include 'controller'
+include 'usecase'
+include 'persistence'
 
