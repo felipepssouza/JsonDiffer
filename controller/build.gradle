@@ -1,0 +1,11 @@
+group 'br.com.felipe'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url "http://repo.spring.io/snapshot" }
+    maven { url "http://repo.spring.io/milestone" }
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-data-rest')
+}

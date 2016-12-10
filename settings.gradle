@@ -1,0 +1,4 @@
+rootProject.name = 'JsonDiffer'
+include 'config'
+include 'controller'
+

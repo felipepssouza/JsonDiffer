@@ -1,0 +1,52 @@
+group 'br.com.felipe'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext {
+        springBootVersion = '1.4.0.RELEASE'
+    }
+    repositories {
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+        jcenter()
+    }
+    dependencies {
+        classpath "net.saliman:gradle-cobertura-plugin:2.3.2"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+dependencies {
+    compile project(":config")
+    compile('org.springframework.boot:spring-boot-starter-data-rest')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+jar {
+    baseName = 'JsonDiffer'
+    version = '1.0-SNAPSHOT'
+    manifest {
+        attributes 'Main-Class': 'br.com.felipe.Application'
+    }
+}
+
+bootRun {
+    main = 'br.com.felipe.Application'
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'spring-boot'
+
+    sourceCompatibility = 1.8
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+}
+
+
