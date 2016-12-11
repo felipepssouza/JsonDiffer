@@ -23,7 +23,7 @@ public class DiffController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "/diff/{id}/", method = RequestMethod.GET)
+    @RequestMapping(value = "/diff/{id}", method = RequestMethod.GET)
     public String diff(@PathVariable String id) {
         return retrieveJson.retrieveJsonById(id);
     }
