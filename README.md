@@ -102,3 +102,17 @@ This is an example of cUrl to call it:
 curl -X POST -d 'ew0KICAibmFtZSI6ICJUYW1pcmVzIiwNCiAgImNpdHkiOiAiU2FvIFBhdWxvIg0KfQ==' "http://localhost:8080/v1/diff/133/right"
 ```
 
+## JsonDiffer - How to use:
+
+- To configure the database enter in this file: 
+```
+$ROOT/persistence/br/com/felipe/config/DataSourceConfigJPA.java
+```
+There change the URL, user and password.
+
+- Execute these scripts on the path (Or leave it update by the ddl mode, and create the database meld): 
+```
+$ROOT/scripts/*.sql
+```
+
+
