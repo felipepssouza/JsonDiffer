@@ -33,7 +33,7 @@ Returns the result of the difference of JSON from left and right. Example:
 }
 ```
 
-- If they are differents and same size, this is the response, it will do a insight. Insight will say if there is any node that the key is different in the first list, in the other list is the values different, these are the possible cases: 
+- If they are differents and same size, this is the response, it will do a insight. Insight will say if there is any node that the key is different in the first list, in the other list the values are different, these are the possible cases: 
   - Totally different offset and size equals to zero
 ```json
 
