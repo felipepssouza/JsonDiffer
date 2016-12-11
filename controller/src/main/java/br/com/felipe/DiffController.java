@@ -1,5 +1,6 @@
 package br.com.felipe;
 
+import br.com.felipe.InsertJson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ public class DiffController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "/diff/{id}/", method = RequestMethod.POST)
+    @RequestMapping(value = "/diff/{id}/", method = RequestMethod.GET)
     public String diff(@PathVariable String id) {
         return id;
     }

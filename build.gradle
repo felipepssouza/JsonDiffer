@@ -59,6 +59,7 @@ allprojects {
     dependencies {
         compile('org.springframework.boot:spring-boot-starter-data-rest')
         testCompile group: 'junit', name: 'junit', version: '4.12'
+        testCompile('org.springframework.boot:spring-boot-starter-test')
     }
 }
 

@@ -3,4 +3,5 @@ version '1.0-SNAPSHOT'
 
 dependencies {
     compile project(':persistence')
+    compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
 }
