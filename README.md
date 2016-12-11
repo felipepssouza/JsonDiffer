@@ -90,6 +90,11 @@ Returns Ok! (200)
 
 This is an example of cUrl to call it: 
 ```
-curl -X POST -d 'ew0KICAibmFtZSI6ICJUYW1pcmVzIiwNCiAgImNpdHkiOiAiU2FvIFBhdWxvIg0KfQ==' "http://localhost:8080/v1/diff/133"
+curl -X POST -d 'ew0KICAibmFtZSI6ICJUYW1pcmVzIiwNCiAgImNpdHkiOiAiU2FvIFBhdWxvIg0KfQ==' "http://localhost:8080/v1/diff/133/left"
 ```
+
+### **POST:** `/v1/diff/:id/right`
+Receives the id and the position right, and in the body receives a JSON in base64.
+Returns Ok! (200)
+
 
