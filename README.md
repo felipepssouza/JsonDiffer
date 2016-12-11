@@ -127,7 +127,7 @@ $ROOT/gradlew test
 
 ## JsonDiffer - How it is organized:
 
-Following the Clear Architeture of Uncle Bob. This is the structure: 
+Following the Clean Architeture of Uncle Bob. This is the structure: 
 ```
 -ROOT
   - controller (All the controllers are here)
