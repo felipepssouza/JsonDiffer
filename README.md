@@ -33,6 +33,9 @@ Returns the result of the difference of JSON from left and right. Example:
       "equal": false,
       "differentSize": false,
       "insight": {
+        "differentKeys": [
+                "city"
+          ],
         "differenceValueOffset": [
           {
             "key": "name",
@@ -48,6 +51,7 @@ Returns the result of the difference of JSON from left and right. Example:
     "equal": false,
     "differentSize": false,
     "insight": {
+      "differentKeys": [],
       "differenceValueOffset": [
         {
           "key": "name",
