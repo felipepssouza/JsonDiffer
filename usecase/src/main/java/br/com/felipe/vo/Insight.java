@@ -13,6 +13,8 @@ public class Insight {
 
     public Insight() {
         super();
+        this.differentKeys = new ArrayList<>();
+        this.differenceValueOffset = new ArrayList<>();
     }
 
     public void addDifferentKey(String differentKey) {
