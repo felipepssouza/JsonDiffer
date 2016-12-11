@@ -74,9 +74,36 @@ allprojects {
         maven { url "http://repo1.maven.org/maven2/" }
     }
     dependencies {
+        compile('org.springframework.boot:spring-boot-starter-data-rest')
         testCompile group: 'junit', name: 'junit', version: '4.11'
     }
     test.useTestNG()
+
+    test {
+        testLogging {
+            // set options for log level LIFECYCLE
+            events "failed"
+            exceptionFormat "short"
+
+            // set options for log level DEBUG
+            debug {
+                events "started", "skipped", "failed"
+                exceptionFormat "full"
+            }
+
+            // remove standard output/error logging from --info builds
+            // by assigning only 'failed' and 'skipped' events
+            info.events = ["failed", "skipped"]
+        }
+    }
+
+    sourceSets {
+        test {
+            java {
+                srcDirs = ["test/br/com/felipe"]
+            }
+        }
+    }
 }
 
 task codeCoverageReport(type: JacocoReport) {

@@ -1,10 +1,13 @@
 package br.com.felipe;
 
-import org.apache.tomcat.util.codec.binary.Base64;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class DiffController {
+
+    @Autowired
+    private InsertJson insertJson;
 
     /**
      * Request responsible to compare two jsons by the id
@@ -24,7 +27,8 @@ public class DiffController {
      */
     @RequestMapping(value = "/diff/{id}/left", method = RequestMethod.POST)
     public String left(@PathVariable String id, @RequestBody String base64JSON) {
-        return id;
+        insertJson.insertLeftJson(id, base64JSON);
+        return ok();
     }
 
     /**
@@ -35,8 +39,12 @@ public class DiffController {
      */
     @RequestMapping(value = "/diff/{id}/right", method = RequestMethod.POST)
     public String right(@PathVariable String id, @RequestBody String base64JSON) {
-        String json = new String(Base64.decodeBase64(base64JSON));
-        return id;
+        insertJson.insertRightJson(id, base64JSON);
+        return ok();
+    }
+
+    private String ok(){
+        return "Ok!";
     }
 
 }

@@ -1,2 +1,9 @@
 group 'br.com.felipe'
 version '1.0-SNAPSHOT'
+
+dependencies {
+    compile 'org.springframework.data:spring-data-jpa:1.10.1.RELEASE'
+    compile 'org.hibernate:hibernate-entitymanager:5.1.0.Final'
+    compile 'mysql:mysql-connector-java:5.1.31'
+    compile 'com.zaxxer:HikariCP:2.4.7'
+}

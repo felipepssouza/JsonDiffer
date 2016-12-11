@@ -1,2 +1,6 @@
 group 'br.com.felipe'
 version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':persistence')
+}

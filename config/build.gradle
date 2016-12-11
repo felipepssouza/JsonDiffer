@@ -4,4 +4,5 @@ version '1.0-SNAPSHOT'
 dependencies {
     compile project(":usecase")
     compile project(":controller")
+    compile project(":persistence")
 }
