@@ -1,4 +1,4 @@
-package br.com.felipe.br.com.felipe.map;
+package br.com.felipe.map;
 
 import java.util.Map;
 

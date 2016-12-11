@@ -1,6 +1,5 @@
 package br.com.felipe.map;
 
-import br.com.felipe.br.com.felipe.map.MapComparator;
 import org.junit.Before;
 import org.junit.Test;
 
