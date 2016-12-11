@@ -108,7 +108,7 @@ curl -X POST -d 'ew0KICAibmFtZSI6ICJUYW1pcmVzIiwNCiAgImNpdHkiOiAiU2FvIFBhdWxvIg0
 ```
 $ROOT/persistence/br/com/felipe/config/DataSourceConfigJPA.java
 ```
-There change the URL, user and password.
+Change the Database URL, user and password.
 
 - Execute these scripts on the path (Or leave it update by the ddl mode, and create the database meld): 
 ```
