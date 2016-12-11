@@ -16,7 +16,7 @@ Returns the result of the difference of JSON from left and right. Example:
     "differentKeys": [],
     "differenceValueOffset": []
   }
-}``
+}```
 
 - If they are differents but different in the size of JSON too, this is the response (the insight is not proccess in this case)
 ```{
