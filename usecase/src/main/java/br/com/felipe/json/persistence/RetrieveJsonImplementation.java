@@ -55,6 +55,7 @@ public class RetrieveJsonImplementation implements RetrieveJson {
             return jsonResponse.buildSuccessJsonResponse();
         }
         if(!mapComparator.isSameSize(leftMap.get(), rightMap.get())){
+            return jsonResponse.buildErrorJsonResponseDifferentSize();
         }
         Insight insight = differenceInsightBuilder.buildInsight(leftMap.get(), rightMap.get());
         return jsonResponse.buildErrorJsonResponseWithInsight(insight);

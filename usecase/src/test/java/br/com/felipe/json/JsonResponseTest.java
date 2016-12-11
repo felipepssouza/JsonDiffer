@@ -36,6 +36,7 @@ public class JsonResponseTest {
 
     @Test
     public void shouldReturnErrorJsonWithoutInsight(){
+        String response = this.jsonResponse.buildErrorJsonResponseDifferentSize();
         assertThat(StringUtils.trimAllWhitespace(response), containsString("\"equal\":false"));
     }
 

@@ -13,13 +13,17 @@ import org.springframework.stereotype.Component;
 public class JsonResponse {
 
     public String buildSuccessJsonResponse(){
+        Response response = new Response(Boolean.TRUE, Boolean.FALSE, new NullInsight());
         return buildJsonFromResponse(response);
     }
 
+    public String buildErrorJsonResponseDifferentSize() {
+        Response response = new Response(Boolean.FALSE, Boolean.TRUE, new NullInsight());
         return buildJsonFromResponse(response);
     }
 
     public String buildErrorJsonResponseWithInsight(Insight insight) {
+        Response response = new Response(Boolean.FALSE, Boolean.FALSE, insight);
         return buildJsonFromResponse(response);
     }
 
