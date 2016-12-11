@@ -115,4 +115,28 @@ There change the URL, user and password.
 $ROOT/scripts/*.sql
 ```
 
+- To run the project, run this commmand, it will be available on the port 8080 (http://localhost:8080/v1): 
+```
+$ROOT/gradlew bootRun
+```
+
+- To run the tests
+```
+$ROOT/gradlew test
+```
+
+## JsonDiffer - How is it organize:
+
+Following the Clear Architeture of Uncle Bob. This is the structure: 
+```
+-ROOT
+  - controller (All the controllers are here)
+  - config (The bootstrap of the system is here, and any possible system configuration, like external confs)
+  - persistence (Anything about persistence and model's are located here, the others cannot access the model, it transfer VO's)
+  - usecase (Here are all the business rules)
+  - scripts (There are some scripts of database to init it)
+```
+
+
+
 
