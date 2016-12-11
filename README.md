@@ -26,7 +26,7 @@ Returns the result of the difference of JSON from left and right. Example:
     "differentKeys": [],
     "differenceValueOffset": []
   }
-}``
+}```
 - If they are differents and same size, this is the response, it will do a insight. Insight will say if there is any node that the key is different in the first list, in the other list is the values different, these are the possible cases: 
   - Totally different offset and size equals to zero
   ```{
@@ -44,7 +44,7 @@ Returns the result of the difference of JSON from left and right. Example:
           }
         ]
       }
-    }``
+    }```
 
   - Different but equals in any part offset will return the first ocurrence of the difference and the size is the size of the value
     ```{
@@ -70,7 +70,7 @@ Returns the result of the difference of JSON from left and right. Example:
         }
       ]
     }
-  }``
+  }```
   - If any node is equal it won't appear
 
 
