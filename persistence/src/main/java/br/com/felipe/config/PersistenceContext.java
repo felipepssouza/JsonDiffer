@@ -16,7 +16,6 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-
 public class PersistenceContext {
 
     @Autowired private DataSourceConfig dataSourceConfig;
