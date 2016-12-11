@@ -1,8 +1,12 @@
 package br.com.felipe;
 
 import br.com.felipe.json.persistence.InsertJson;
+import br.com.felipe.json.persistence.RetrieveJson;
+import br.com.felipe.vo.JsonStructureVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class DiffController {
@@ -10,14 +14,18 @@ public class DiffController {
     @Autowired
     private InsertJson insertJson;
 
+    @Autowired
+    private RetrieveJson retrieveJson;
+
+
     /**
      * Request responsible to compare two jsons by the id
      * @param id
      * @return
      */
     @RequestMapping(value = "/diff/{id}/", method = RequestMethod.GET)
-    public String diff(@PathVariable String id) {
-        return id;
+    public List<JsonStructureVO> diff(@PathVariable String id) {
+        return retrieveJson.retrieveJsonById(id);
     }
 
     /**

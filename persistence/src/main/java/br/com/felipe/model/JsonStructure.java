@@ -35,6 +35,10 @@ public class JsonStructure implements Serializable {
         return new JsonStructure(vo.getId(), vo.getEncodedJson(), vo.getPosition());
     }
 
+    public JsonStructureVO toVO(){
+        return new JsonStructureVO(this.id, this.encodedJson, this.position);
+    }
+
     @Enumerated(EnumType.STRING)
     public JsonPosition getPosition() {
         return position;
