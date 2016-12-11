@@ -1,6 +1,6 @@
 package br.com.felipe;
 
-import br.com.felipe.InsertJson;
+import br.com.felipe.json.persistence.InsertJson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

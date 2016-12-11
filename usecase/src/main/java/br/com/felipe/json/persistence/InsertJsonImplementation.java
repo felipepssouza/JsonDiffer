@@ -1,4 +1,4 @@
-package br.com.felipe;
+package br.com.felipe.json.persistence;
 
 import br.com.felipe.adapter.mysql.JsonDiffRepositoryAdapter;
 import br.com.felipe.vo.JsonPosition;

@@ -1,4 +1,4 @@
-package br.com.felipe;
+package br.com.felipe.json.persistence;
 
 /**
  * Interface responsible to insert the json
