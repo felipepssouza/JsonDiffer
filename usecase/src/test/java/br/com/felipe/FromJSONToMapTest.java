@@ -1,11 +1,11 @@
 package br.com.felipe;
 
 import br.com.felipe.converter.JsonConverter;
-import br.com.felipe.converter.JsonConverter;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Map;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsMapContaining.hasValue;
 
