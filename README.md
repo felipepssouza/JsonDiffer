@@ -5,8 +5,6 @@ Project responsible to get diff from JSON's
 ## JsonDiffer Endpoints
 
 ### **GET:** `/v1/diff/131/`
-Returns Health status
-
 Returns the result of the difference of JSON from left and right. Example: 
 
 - If both sides are equals this is the response
