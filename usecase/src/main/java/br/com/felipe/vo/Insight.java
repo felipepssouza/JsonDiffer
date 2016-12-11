@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class Insight {
 
-    private List<String> differentKeys;
-    private List<JsonObjectDifference> differenceValueOffset;
+    protected List<String> differentKeys;
+    protected List<JsonObjectDifference> differenceValueOffset;
 
     public Insight() {
         super();

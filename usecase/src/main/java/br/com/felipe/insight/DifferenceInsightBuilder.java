@@ -4,12 +4,14 @@ import br.com.felipe.vo.Insight;
 import br.com.felipe.vo.JsonObjectDifference;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
 /**
  * Class responsible to build an object with the insight of differences of two Maps
  */
+@Component
 public class DifferenceInsightBuilder {
 
     /**
@@ -26,6 +28,9 @@ public class DifferenceInsightBuilder {
                 continue;
             }
             Pair<Integer, Integer> tuple = this.difference(leftKeyValue.getValue(), right.get(leftKeyValue.getKey()));
+            if(tuple.getLeft() == -1){
+                continue;
+            }
             insight.addDifferenceValueOffset(new JsonObjectDifference(leftKeyValue.getKey(), tuple.getLeft(), tuple.getRight()));
         }
         return insight;
@@ -34,6 +39,8 @@ public class DifferenceInsightBuilder {
     /**
      * Method responsible to return a tuple of the first ocurrence of
      *  difference and size of difference of elements
+     *
+     *  If they are equals return -1
      * @param right
      * @param left
      * @return Tuple(Pair)

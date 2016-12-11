@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface RetrieveJson {
 
-    List<JsonStructureVO> retrieveJsonById(String id);
+    String retrieveJsonById(String id);
 
 }
