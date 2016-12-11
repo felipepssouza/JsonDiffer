@@ -4,7 +4,7 @@ Project responsible to get diff from JSON's
 
 ## JsonDiffer Endpoints
 
-### **GET:** `/v1/diff/131/`
+### **GET:** `/v1/diff/:id/`
 Returns the result of the difference of JSON from left and right. Example: 
 
 - If both sides are equals this is the response
@@ -84,4 +84,6 @@ Returns the result of the difference of JSON from left and right. Example:
 ```
   - If any node is equal it won't appear
 
+### **POST:** `/v1/diff/:id/left`
+Returns Ok! 
 
