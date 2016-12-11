@@ -43,6 +43,27 @@ public class DifferenceInsightBuilderTest {
         assertThat(insight.getDifferenceValueOffset(), is(equalTo(expectedInsight.getDifferenceValueOffset())));
     }
 
+    @Test
+    public void shouldGetInsightWithNoOffset(){
+        Map<String, String> left = new HashMap<>();
+        left.put("name","Felipe");
+
+        Map<String, String> right = new HashMap<>();
+        right.put("name","Jose");
+
+        Insight insight = builder.buildInsight(left, right);
+        Insight expectedInsight = buildExpectedZeroInsight();
+
+        assertThat(insight.getDifferentKeys(), is(equalTo(expectedInsight.getDifferentKeys())));
+        assertThat(insight.getDifferenceValueOffset(), is(equalTo(expectedInsight.getDifferenceValueOffset())));
+    }
+
+    private Insight buildExpectedZeroInsight() {
+        Insight insight = new Insight();
+        insight.addDifferenceValueOffset(new JsonObjectDifference("name", 0, 0));
+        return insight;
+    }
+
 
     private Insight buildExpectedInsight() {
         Insight insight = new Insight();
