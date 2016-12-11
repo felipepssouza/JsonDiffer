@@ -125,7 +125,7 @@ $ROOT/gradlew bootRun
 $ROOT/gradlew test
 ```
 
-## JsonDiffer - How is it organize:
+## JsonDiffer - How it is organized:
 
 Following the Clear Architeture of Uncle Bob. This is the structure: 
 ```
