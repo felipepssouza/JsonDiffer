@@ -1,4 +1,4 @@
-package br.com.felipe;
+package br.com.felipe.converter;
 
 import br.com.felipe.converter.JsonConverter;
 import org.junit.Before;

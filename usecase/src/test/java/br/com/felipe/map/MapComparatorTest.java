@@ -48,4 +48,27 @@ public class MapComparatorTest {
         assertThat(isTotallyEqual, equalTo(true));
     }
 
+    @Test
+    public void shouldReturnTrueIfTheSameMapSize(){
+        Map<String, String> right = new HashMap<>();
+        right.put("name","Felipe");
+
+        Map<String, String> left = new HashMap<>();
+        left.put("name","Felipe");
+        boolean isSameSize = this.comparator.isSameSize(right, left);
+        assertThat(isSameSize, equalTo(true));
+    }
+
+    @Test
+    public void shouldReturnFalseIfNotTheSameMapSize(){
+        Map<String, String> right = new HashMap<>();
+        right.put("name","Felipe");
+
+        Map<String, String> left = new HashMap<>();
+        left.put("name","Felipe");
+        left.put("Size", "Greater");
+        boolean isSameSize = this.comparator.isSameSize(right, left);
+        assertThat(isSameSize, equalTo(false));
+    }
+
 }
