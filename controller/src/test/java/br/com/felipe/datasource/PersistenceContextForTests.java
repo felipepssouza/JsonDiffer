@@ -18,9 +18,9 @@ public class PersistenceContextForTests {
     @Bean
     public DataSource getDataSource(){
         HikariConfig config = new HikariConfig();
-        config.setDriverClassName("org.hsqldb.jdbcDriver");
-        config.setJdbcUrl("jdbc:hsqldb:mem:testdb");
-        config.setUsername("sa");
+        config.setDriverClassName("org.hibernate.dialect.MySQL5Dialect");
+        config.setJdbcUrl("jdbc:mysql://localhost:3306/test");
+        config.setUsername("root");
         config.setPassword("");
 
         HikariDataSource dataSource = new HikariDataSource(config);
