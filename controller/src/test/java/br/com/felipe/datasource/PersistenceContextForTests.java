@@ -35,7 +35,7 @@ public class PersistenceContextForTests {
         entityManagerFactoryBean.setPackagesToScan("br.com.felipe.model");
 
         Properties jpaProperties = new Properties();
-        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
+        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
 
         entityManagerFactoryBean.setJpaProperties(jpaProperties);
