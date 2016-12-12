@@ -12,6 +12,4 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile 'org.hsqldb:hsqldb:2.3.3'
     testCompile 'com.zaxxer:HikariCP:2.4.7'
-
-
 }

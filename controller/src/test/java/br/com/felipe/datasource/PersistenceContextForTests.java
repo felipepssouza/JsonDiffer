@@ -18,9 +18,9 @@ public class PersistenceContextForTests {
     @Bean
     public DataSource getDataSource(){
         HikariConfig config = new HikariConfig();
-        config.setDriverClassName("org.hibernate.dialect.MySQL5Dialect");
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/test");
-        config.setUsername("root");
+        config.setDriverClassName("org.hsqldb.jdbcDriver");
+        config.setJdbcUrl("jdbc:hsqldb:mem:testdb");
+        config.setUsername("sa");
         config.setPassword("");
 
         HikariDataSource dataSource = new HikariDataSource(config);
@@ -35,7 +35,7 @@ public class PersistenceContextForTests {
         entityManagerFactoryBean.setPackagesToScan("br.com.felipe.model");
 
         Properties jpaProperties = new Properties();
-        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
         jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
 
         entityManagerFactoryBean.setJpaProperties(jpaProperties);
