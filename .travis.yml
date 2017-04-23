@@ -6,7 +6,9 @@ jdk:
 services:
   - mysql
 before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
+  - mysql -e 'DROP DATABASE IF EXISTS meld;
+               CREATE DATABASE meld DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;'
+
 script:
   - ./gradlew clean test
   - ./gradlew codeCoverageReport

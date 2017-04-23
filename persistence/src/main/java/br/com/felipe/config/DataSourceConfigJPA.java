@@ -27,7 +27,7 @@ public class DataSourceConfigJPA implements DataSourceConfig {
 
     @Override
     public String getPassword() {
-        return "Hv9BfYrC";
+        return "";
     }
 
     @Override
