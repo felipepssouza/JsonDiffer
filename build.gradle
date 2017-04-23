@@ -48,6 +48,7 @@ allprojects {
     apply plugin: 'maven'
     apply plugin: 'spring-boot'
     apply plugin: 'jacoco'
+    apply plugin: 'findbugs'
 
     sourceCompatibility = 1.8
     repositories {
