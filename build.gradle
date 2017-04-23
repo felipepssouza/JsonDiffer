@@ -59,13 +59,18 @@ allprojects {
     }
     dependencies {
         compile('org.springframework.boot:spring-boot-starter-data-rest')
+        // https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-plugin-api
+        compile group: 'org.codehaus.sonar', name: 'sonar-plugin-api', version: '5.1'
         testCompile group: 'junit', name: 'junit', version: '4.12'
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
+
 }
 
 task codeCoverageReport(type: JacocoReport) {
-    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+    executionData fileTree(project.rootDir.absolutePath)
+            .include("**/build/jacoco/*.exec")
+            .exclude("**/Application.java")
 
     subprojects.each {
         sourceSets it.sourceSets.main
